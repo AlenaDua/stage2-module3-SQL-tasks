@@ -1,12 +1,12 @@
-INSERT INTO student (id, name, birthday, group_id) VALUES (1, 'John', NULL, 1);
-INSERT INTO student (id, name, birthday, group_id) VALUES (2, 'Chris', NULL, 1);
-INSERT INTO student (id, name, birthday, group_id) VALUES (3, 'Carl', NULL, 1);
-INSERT INTO student (id, name, birthday, group_id) VALUES (4, 'Oliver', NULL, 2);
-INSERT INTO student (id, name, birthday, group_id) VALUES (5, 'James', NULL, 2);
-INSERT INTO student (id, name, birthday, group_id) VALUES (6, 'Lucas', NULL, 2);
-INSERT INTO student (id, name, birthday, group_id) VALUES (7, 'Henry', NULL, 2);
-INSERT INTO student (id, name, birthday, group_id) VALUES (8, 'Jacob', NULL, 3);
-INSERT INTO student (id, name, birthday, group_id) VALUES (9, 'Logan', NULL, 3);
+INSERT INTO student (id, name, birthday, groupnumber) VALUES (1, 'John', '1994-11-03', 1);
+INSERT INTO student (id, name, birthday, groupnumber) VALUES (2, 'Chris', '1994-11-03', 1);
+INSERT INTO student (id, name, birthday, groupnumber) VALUES (3, 'Carl', '1994-11-03', 1);
+INSERT INTO student (id, name, birthday, groupnumber) VALUES (4, 'Oliver', '1994-11-03', 2);
+INSERT INTO student (id, name, birthday, groupnumber) VALUES (5, 'James', '1994-11-03', 2);
+INSERT INTO student (id, name, birthday, groupnumber) VALUES (6, 'Lucas', '1994-11-03', 2);
+INSERT INTO student (id, name, birthday, groupnumber) VALUES (7, 'Henry', '1994-11-03', 2);
+INSERT INTO student (id, name, birthday, groupnumber) VALUES (8, 'Jacob', '1994-11-03', 3);
+INSERT INTO student (id, name, birthday, groupnumber) VALUES (9, 'Logan', '1994-11-03', 3);
 
 -- Insert New Subjects
 
@@ -29,10 +29,10 @@ INSERT INTO paymenttype (id, name) VALUES (3, 'MONTHLY');
 
 -- Insert Payments
 
-INSERT INTO payment (id, type_id, amount, student_id, payment_date) VALUES (1, 2, 100.00, (SELECT id FROM Student WHERE name = 'John'), NULL);
-INSERT INTO payment (id, type_id, amount, student_id, payment_date) VALUES (2, 3, 500.00, (SELECT id FROM Student WHERE name = 'Oliver'), NULL);
-INSERT INTO payment (id, type_id, amount, student_id, payment_date) VALUES (3, 2, 150.00, (SELECT id FROM Student WHERE name = 'Henry'), NULL);
-INSERT INTO payment (id, type_id, amount, student_id, payment_date) VALUES (4, 1, 10.00, (SELECT id FROM Student WHERE name = 'James'), NULL);
+INSERT INTO payment (id, type_id, amount, student_id, payment_date) VALUES (1, 2, 100.00, (SELECT id FROM Student WHERE name = 'John'), '2022-11-03');
+INSERT INTO payment (id, type_id, amount, student_id, payment_date) VALUES (2, 3, 500.00, (SELECT id FROM Student WHERE name = 'Oliver'), '2022-11-03');
+INSERT INTO payment (id, type_id, amount, student_id, payment_date) VALUES (3, 2, 150.00, (SELECT id FROM Student WHERE name = 'Henry'), '2022-11-03');
+INSERT INTO payment (id, type_id, amount, student_id, payment_date) VALUES (4, 1, 10.00, (SELECT id FROM Student WHERE name = 'James'), '2022-11-03');
 
 -- Insert Marks
 
